@@ -5,3 +5,70 @@
   
   Ques : Sort in descending order --> Find the total number of times the numbers are swapped (using Divide & Conquer)
 */
+
+
+// Test Case fail
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        int n;
+        n = sc.nextInt();
+        int arr[] = new int[n]; 
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int start = 0;
+        int end = n-1;
+        
+        int ans = -1;
+        
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid] < arr[start]){
+                ans = mid;
+                end = mid-1;
+            }
+            else{
+                start = mid+1;
+            }
+        }
+        
+        System.out.println("The array is rotated "+ans+" times");
+    }
+}
+
+// Code Success
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+        int n;
+        n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int start = 0;
+        int end = n-1;
+        
+        int ans = 0;
+        
+        while(start<end){
+            int mid = start + (end-start)/2;
+            if(arr[mid] < arr[start]){
+                ans = mid;
+                end = mid-1;
+            }
+            else{
+                start = mid+1;
+            }
+        }
+        
+        System.out.println("The array is rotated "+ans+" times");
+    }
+}
