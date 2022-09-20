@@ -1,1 +1,7 @@
 // Created on 19/09/22      Pat on 19/09/22
+/*
+  Given an array
+  [4,5,3,2,1]
+  
+  Ques : Sort in descending order --> Find the total number of times the numbers are swapped (using Divide & Conquer)
+*/
