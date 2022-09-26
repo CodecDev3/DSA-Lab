@@ -1,0 +1,17 @@
+// Coded on 26/09/22
+
+/*
+
+Implement the stack using linked list as discussed in lab
+
+For example 
+
+Stack 1 = 1 2 3 4 5
+
+Stack 2 = 6 7 8 9 10
+
+Final output in the array should be
+
+5 4 3 2 1 6 7 8 9 10
+
+*/
