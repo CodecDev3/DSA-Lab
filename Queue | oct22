@@ -3,4 +3,8 @@
 /*
 Insertion - Enqueue (Rear)
 Deletion - Dequeue (Front)
+
+LinkedList = FiFo (push and pop)
+ArrayList = 
+Stack = LiLo (push and pop)
 */
