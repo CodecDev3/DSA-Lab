@@ -17,27 +17,45 @@ Final output in the array should be
 */
 
 
-import java.util.LinkedList;
-class LinkedListExample {
+import java.util.*;
 
-  public static void main(String[] args) {
+public class dev{
+    public static void main(String args[]){
+        Stack<Integer> s1 = new Stack<Integer>();
+        Stack<Integer> s2 = new Stack<Integer>();
+        LinkedList<Integer> ll = new LinkedList<>();
+      
+      
+      
+      s1.push(1);
+      s1.push(2);
+      s1.push(3);
+      s1.push(4);
+      s1.push(5);
+      System.out.println(s1);                            
+      
+      s2.push(6);
+      s2.push(7);
+      s2.push(8);
+      s2.push(9);
+      s2.push(10);
+      System.out.println(s2);
+      
+      
+      for(int i=4;i>=0;i--){
+        ll.add(s1.pop());
+      }
 
-     // Create a LinkedList of Strings
-     LinkedList<String> list = new LinkedList<String>();
+      // this loops only assign values to index 5 to 9 (just to fill places)
+      for(int i=9;i>=5;i--){
+        ll.add(s2.peek());    
+      }
 
-     // Add few Elements
-     list.add("Jack");
-     list.add("Robert");
-     list.add("Chaitanya");
-     list.add("kate");
+      // this loop will set proper values to ll
+      for(int i=9;i>=5;i--){
+        ll.set(i,s2.pop());
+      }
 
-     // Display LinkList elements
-     System.out.println("LinkedList contains: "+list);
-
-     // push Element the list
-     list.push("NEW ELEMENT");
-
-     // Display after push operation
-     System.out.println("LinkedList contains: "+list);
-  }
+      System.out.println(ll);
+    }
 }
