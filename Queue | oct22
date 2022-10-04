@@ -3,8 +3,8 @@
 /*
 Insertion - Enqueue (Rear)
 Deletion - Dequeue (Front)
-
-LinkedList = FiFo (push and pop)
+                                          [1,2,3,4,5]         5 is last, 1 is first
+LinkedList = FiFo (push/add and pop)
 ArrayList = 
-Stack = LiLo (push and pop)
+Stack = LiLo (push/add and pop)     // peek() used to see the uppermost element in a stack
 */
