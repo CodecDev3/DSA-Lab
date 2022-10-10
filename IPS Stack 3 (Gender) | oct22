@@ -1,0 +1,68 @@
+// Coded on 10/10/22
+
+/*
+The government of India has decided to celebrate the Independence day debate named “Gender Equality”  in the upper house of the Parliament. Assume that there are ten participants to be allowed with equal number of males(m) and females(f) gender equality in the house, which means an equal number of males(m) and females(f). They may enter in a different order every time.
+f f m m f f m m m f
+
+f m m m f f m f f m
+
+Use STACK ADTs to check whether an equal number of male and female candidates in the parliament for the debate.
+
+Input: 1st line indicates the number of persons:
+
+2nd line indicates the person's gender one by one
+
+Sample Input 1 :
+
+10
+
+f f m m f f m m m f
+
+Output : Valid
+
+ 
+
+Sample Input 2:
+
+8
+
+f m m m f f f f
+
+Output : Invalid
+*/
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        Stack<String> ge = new Stack<>();
+        
+        int n = sc.nextInt();
+        int m=0,f=0;
+        
+        for(int i=0;i<n;i++){
+            String c = sc.next();
+            ge.push(c);
+            
+            if(c.equals("f")){
+                f++;    
+            }
+            
+            if(c.equals("m")){
+                m++;
+            }
+          
+        }
+        
+        if(m==f){
+            System.out.println("Valid");
+        }
+        else{
+            System.out.println("Invalid");
+        }
+             
+        System.out.println(ge);
+        
+    }
+}
