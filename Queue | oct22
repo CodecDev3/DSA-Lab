@@ -8,3 +8,65 @@ LinkedList = FiFo (push/add and pop)
 ArrayList = 
 Stack = LiLo (push/add and pop)     // peek() used to see the uppermost element in a stack
 */
+
+
+/*
+Given a full Queue (Q) and an empty stack (S), write appropriate algorithm to perform the following operations using only the primitive operations of stack and Queue.
+
+(i) Move all odd elements in Q to S in the same order.
+
+(ii) Move the left out elements in the Q to the S in reverse order such that the bottom half of S would contain all odd number in Q and top half of the Q would contain all even numbers in Q in reverse order
+*/
+
+#include <iostream>
+#include <queue>
+#include <stack>
+
+using namespace std;
+
+int main(){
+    
+    stack<int> odd;
+    queue<int> even;
+    
+    queue<int> q;
+    
+    while(!cin.eof()){
+        int temp;
+        cin>>temp;
+        
+        q.push(temp);
+    }
+    
+    while(!q.empty()){
+        if(q.front()%2 == 0) even.push(q.front());
+        else odd.push(q.front());
+    
+        q.pop();
+    }
+    
+    queue<int> final;
+    
+    while(!even.empty()){
+        int temp = even.front();
+        even.pop();
+        
+        final.push(temp);
+    }
+    
+    while(!odd.empty()){
+        int temp = odd.top();
+        odd.pop();
+        
+        final.push(temp);
+    }
+    
+    while(!final.empty()){
+        int top = final.front();
+        final.pop();
+        
+        cout<<top<<" ";
+    }
+    
+    return 0;
+}
