@@ -1,7 +1,9 @@
 // Coded on 10/10/22
 
 /*
-The government of India has decided to celebrate the Independence day debate named “Gender Equality”  in the upper house of the Parliament. Assume that there are ten participants to be allowed with equal number of males(m) and females(f) gender equality in the house, which means an equal number of males(m) and females(f). They may enter in a different order every time.
+The government of India has decided to celebrate the Independence day debate named “Gender Equality”  in the upper house of the Parliament. 
+Assume that there are ten participants to be allowed with equal number of males(m) and females(f) gender equality in the house, 
+which means an equal number of males(m) and females(f). They may enter in a different order every time.
 f f m m f f m m m f
 
 f m m m f f m f f m
